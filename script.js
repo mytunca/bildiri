@@ -62,7 +62,10 @@ class SignatureTable {
 
     const dataToRender = this._filter
       ? this.data.filter(row => {
-        return row.name.replaceAll(" ", "").toLocaleLowerCase().includes(this._filter.toLocaleLowerCase());
+        return row.name
+          .replaceAll(" ", "")
+          .toLocaleLowerCase()
+          .includes(this._filter.toLocaleLowerCase());
       })
       : this.data;
 
@@ -83,7 +86,7 @@ class SignatureTable {
    * @param {String} text
    */
   static set filter(text) {
-    this._filter = text;
+    this._filter = text.replaceAll(" ", "");
     this.render();
   }
 
