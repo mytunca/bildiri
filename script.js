@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Sayfa yüklendiğinde metni ve tabloyu güncelle
   updateText();
-  //SignatureTable.getData();
+  SignatureTable.getData();
 });
 
 class SignatureTable {
