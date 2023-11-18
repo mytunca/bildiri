@@ -36,11 +36,54 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(error => {
         console.error('Hata:', error);
       });
+    
+    //Sayfadaki diğer metin içeriklerini güncelle
+    fetch(`assets/i18n/${currentLanguage}.json`)
+      .then(response => response.json())
+      .then(languageData => {
+        document.lang = currentLanguage;
+        if (currentLanguage == "ar") document.dir = "rtl";
+        else document.dir = "";
+
+        const elementsToUpdate = [
+          {
+            id: "navbar-title",
+            toUpdate: "innerHTML"
+          },
+          {
+            id: "th-name",
+            toUpdate: "innerHTML"
+          },
+          {
+            id: "th-signature-date",
+            toUpdate: "innerHTML"
+          },
+          {
+            id: "signature-list-caption",
+            toUpdate: "innerHTML"
+          },
+          {
+            id: "filter",
+            toUpdate: "placeholder"
+          },
+        ];
+
+        console.log(elementsToUpdate);
+
+        elementsToUpdate.forEach(el => {
+          console.log(el);
+          document.getElementById(el.id)[el.toUpdate] = languageData[el.id];
+        })
+
+      })
+      .catch(error => {
+        console.error('Hata:', error);
+      });
   }
 
   // Sayfa yüklendiğinde metni ve tabloyu güncelle
   updateText();
-  SignatureTable.getData();
+  //SignatureTable.getData();
 });
 
 class SignatureTable {

@@ -29,7 +29,7 @@
 <body>
   <nav class="navbar sticky-top bg-body-tertiary">
     <div class="container-fluid">
-      <span class="navbar-brand">Türk Hekimlerinden Bildiri (17.11.2023)</span>
+      <span class="navbar-brand" id="navbar-title">Türk Hekimlerinden Bildiri (17.11.2023)</span>
       <div class="navbar-expand">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -66,7 +66,7 @@
 
       <div class="col col-12 col-lg-4 table-col">
         <div class="filter-div">
-          <h6 class="h6">İmza Listesi</h6>
+          <h6 class="h6" id="signature-list-caption">İmza Listesi</h6>
           <input type="text" class="form-control" placeholder="Filtrele" id="filter">
         </div>
 
@@ -74,8 +74,8 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>İsim</th>
-              <th>İmza Tarihi</th>
+              <th id="th-name">İsim</th>
+              <th id="th-signature-date">İmza Tarihi</th>
             </tr>
           </thead>
           <tbody id="signature-list">
