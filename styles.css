@@ -1,0 +1,74 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.container>.row>.col {
+  padding-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .row>.col {
+    height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+tbody {
+  counter-reset: rowNumber;
+  font-size: small;
+}
+
+thead tr th:first-child, tbody tr td:first-child {
+  text-align: center;
+  width: 15%;
+}
+
+tbody tr td:first-child::before {
+  counter-increment: rowNumber;
+  content: counter(rowNumber);
+}
+
+tbody {
+  display: block;
+  height: 57vh;
+  overflow: auto;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  /* even columns width , fix width of table too*/
+}
+
+thead {
+  width: calc(100% - 1em)
+    /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.filter-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#filter {
+  width: 200px;
+}

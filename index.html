@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Doktorlardan Gazze Hakkında Bildiri</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="lib\showdownjs\dist\showdown.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar sticky-top bg-body-tertiary">
+    <div class="container-fluid">
+      <span class="navbar-brand">Türk Hekimlerinden Bildiri (17.11.2023)</span>
+      <div class="navbar-expand">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="navbar-brand flag" data-lang="tr">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" alt="Türkiye Bayrağı"
+                width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-brand flag" data-lang="en">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg"
+                alt="Birleşik Krallık Bayrağı" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-brand flag" data-lang="ar">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
+                alt="Suudi Arabistan Bayrağı" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 col-lg-8">
+        <p id="declaration-text"></p>
+      </div>
+
+      <div class="col col-12 col-lg-4 table-col">
+        <div class="filter-div">
+          <h6 class="h6">İmza Listesi</h6>
+          <input type="text" class="form-control" placeholder="Filtrele" id="filter">
+        </div>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>İsim</th>
+              <th>İmza Tarihi</th>
+            </tr>
+          </thead>
+          <tbody id="signature-list">
+            <!-- İmzalar buraya eklenecek -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
