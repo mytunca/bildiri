@@ -92,7 +92,7 @@ class SignatureTable {
 
   static getData() {
     this.el.innerHTML = '<tr><td></td><td colspan="2">İsimler yükleniyor...</td></tr>';
-    const url = "https://script.google.com/macros/s/AKfycbyz5Ff8EnFAh9acbVi8Vjeip1AkQJFy4CXA2DL7rzaf-4eTuEJAJgRtAIvmuEGZ2Vrjgw/exec";
+    const url = "https://script.google.com/macros/s/AKfycby8oix6aoonJOVvJNCqtARCzoTFltj6fhvGEHB361tqJEY5WWWqo-PsEXY3Lv8Rlx4E/exec";
     fetch(url)
       .then(x => x.json())
       .then(data => { this.data = data; this.render() })
