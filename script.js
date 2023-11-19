@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     SignatureTable.filter = e.target.value;
   })
 
-  //i18n.currentLanguage = "tr";
+  i18n.currentLanguage = "tr";
 
   SignatureTable.getData();
 });
@@ -127,7 +127,7 @@ class i18n {
    */
   static set currentLanguage(lang) {
     this._currentLanguage = lang;
-    document.documentElement.lang = lang;
+    //document.documentElement.lang = lang;
     if (lang == "ar") document.dir = "rtl";
     else document.dir = "";
     this.applyLanguage();
