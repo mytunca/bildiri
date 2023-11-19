@@ -20,13 +20,13 @@ A new war crime that will never be forgiven has been committed with the disconne
 
 Ambulances have been bombed, and civilians have been condemned to die at the scene. Honorable 'white-flag' physicians and dedicated healthcare personnel practicing their heroic professions have also suffered from this brutality, resulting in hundreds of losses. 
 
-We extend our greetings and prayers to all these heroic colleagues. However, we are ashamed that 100 Israeli doctors, who advocate the destruction of hospitals in Gaza, are our colleagues.
+We extend our greetings and prayers to all these heroic colleagues. However, **we are ashamed that 100 Israeli doctors, who advocate the destruction of hospitals in Gaza, are our colleagues.**
 
 In Gaza, devastated by thousands of bombs, including white phosphorus bombs, people and other living beings are dying under the debris without being rescued. The bodies of those martyred are not even allowed to be collected. 
 
 People are prevented from accessing water, electricity, and food, and aid trucks sent from other countries are held at the border. In the area where wastewater mixes with the streets, it has been reported by the hospital chief that stray animals attack the corpses. Gazans forced to migrate on roads face dangers such as the risk of infectious diseases and attacks by occupying Israeli soldiers. 
 
-The genocide seen in Nazi Germany in history is being implemented by the occupying Israel in different ways.
+**The genocide seen in Nazi Germany in history is being implemented by the occupying Israel in different ways.**
 Regardless of the reasons, these crimes against humanity are unforgivable both in the conscience of society and according to the rules of international law. 
 
 No justification can justify this genocide. As sensitive physicians of the Republic of Türkiye, we support the dignified resistance of the Palestinian people and call on the entire world to take a moral stance. Continuing to shout that when even one person is killed, all of humanity is killed, we will not remain silent in the face of this brutality under the mission of preserving the sanctity of human life.
