@@ -3,5 +3,6 @@
   "signature-list-caption": "قائمة الموقعين",
   "th-name": "الاسم",
   "th-signature-date": "تاريخ التوقيع",
-  "filter": "ابحث"
+  "filter": "ابحث",
+  "loading": "تحميل"
 }

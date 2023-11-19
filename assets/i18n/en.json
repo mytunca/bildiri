@@ -3,5 +3,6 @@
   "signature-list-caption": "Signature List",
   "th-name": "Name",
   "th-signature-date": "Signature Date",
-  "filter": "Filter"
+  "filter": "Filter",
+  "loading": "Loading..."
 }

@@ -29,6 +29,10 @@
   }
 }
 
+.nav-item {
+  cursor: pointer;
+}
+
 tbody {
   counter-reset: rowNumber;
   font-size: small;
