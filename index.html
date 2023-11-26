@@ -201,7 +201,7 @@
         //this.declarationText.innerHTML = '';
 
         // Metin dosyasını oku ve içeriği ekle
-        fetch(`/assets/content/tr.md`)
+        fetch(`assets/content/tr.md`)
           .then(response => response.text())
           .then(data => {
             const markdownParts = data.split("<!-- seperator -->");
