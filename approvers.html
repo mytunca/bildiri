@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>İmza Listesi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta property="og:title" content="Gazze'deki Soykırım Hakkında Bildiri" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/mytunca/bildiri/main/assets/images/card-image.jpg" />
+
+  <meta property="og:url" content="https://mytunca.github.io/bildiri" />
+
+  <meta property="og:description"
+    content="17.11.2023 tarihinde binlerce bağımsız hekimin İsrail tarafından Gazze'de uygulanan soykırım hakkında yayımladığı bildiri" />
+
+  <meta name="description"
+    content="17.11.2023 tarihinde binlerce bağımsız hekimin İsrail tarafından Gazze'de uygulanan soykırım hakkında yayımladığı bildiri" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/x-icon" href="images\palestine-flag-circular.svg">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQMCX7GBGX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MQMCX7GBGX');
+  </script>
+</head>
+
+<body class="is-preload">
+
+  <!-- Page Wrapper -->
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+      <nav id="nav">
+        <ul>
+          <li class="special">
+            <a href="#menu" class="menuToggle"><span>Menü</span></a>
+            <div id="menu">
+              <ul>
+                <li><a href="./">BİLDİRİ METNİ</a></li>
+                <li>
+                  <bold>İMZA LİSTESİ</bold>
+                </li>
+                <li><a href="about-us.html">HAKKIMIZDA</a></li>
+                <li><a href="contact.html">BİZE ULAŞIN</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <article id="main">
+      <header>
+        <h2>BİLDİRİYİ İMZALAYAN HEKİMLERİMİZ</h2>
+      </header>
+      <section class="wrapper style5">
+        <div class="inner">
+          <h5>ŞU ANA KADAR BİLDİRİYİ İMZALAYAN HEKİM SAYISI: <span id="num-signatures"></span></h5>
+          <div class="table-wrapper">
+            <table class="alt">
+              <thead>
+                <tr>
+                  <th>İsim</th>
+                  <th>İmza Tarihi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Yükleniyor...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button id="btn-show-all" class="button primary fit">Tümünü Göster</button>
+        </div>
+      </section>
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://x.com/drwithpalestine" target="_blank" class="icon brands fa-twitter"><span
+              class="label">Twitter</span></a></li>
+        <li><a href="https://instagram.com/doctorsstandwithpalestine" target="_blank"
+            class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope"><span
+              class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; 2023</li>
+        <li>Prepared By Dr. Muhammet Yunus Tunca</li>
+        <li>Design: <a href="http://html5up.net/spectral">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Firebase scripts -->
+  <script src="assets/js/firebase-app-compat.js"></script>
+  <script src="assets/js/firebase-database-compat.js"></script>
+
+  <script>
+    class Table {
+      static instance = new Table();
+
+      constructor() {
+        this.el = document.querySelector("table tbody");
+      }
+
+      set data(val) {
+        this._data = val;
+        this.render();
+      }
+
+      render() {
+        this.el.innerHTML = Object.keys(this._data).map(key => {
+          const { name, time } = this._data[key];
+          return `<tr><td>${name}</td><td>${new Date(time).toLocaleString('tr-TR')}</td></tr>`;
+        })
+          .join("");
+      }
+
+    }
+
+    class ShowAllBtn {
+      static instance = new ShowAllBtn();
+
+      constructor() {
+        this.el = document.querySelector("#btn-show-all");
+        this.el.addEventListener("click", this.handleClick);
+      }
+
+      handleClick() {
+        FirebaseDB.instance.switchToShowAll();
+      }
+    }
+
+    class FirebaseDB {
+      static instance = new FirebaseDB();
+
+      constructor() {
+        this.firebaseConfig = {
+          apiKey: "AIzaSyBoBmveCF93fAoTa7Nlal-IRtY5gDIGrB8",
+          authDomain: "gazze-bildiri.firebaseapp.com",
+          projectId: "gazze-bildiri",
+          storageBucket: "gazze-bildiri.appspot.com",
+          messagingSenderId: "340887302115",
+          appId: "1:340887302115:web:af58504bce1f9597cd3ad6",
+          measurementId: "G-792NBDMC2K"
+        };
+
+        this.init();
+      }
+
+      init() {
+        firebase.initializeApp(this.firebaseConfig);
+        this.db = firebase.database();
+
+        const countRef = this.db.ref('approvers/count');
+        countRef.on('value', snapshot => {
+          document.querySelector("#num-signatures").textContent = snapshot.val();
+        })
+
+        this.signatureListRef = this.db.ref('approvers/list').limitToFirst(50);
+      }
+
+      switchToShowAll() {
+        this.signatureListRef = this.db.ref('approvers/list')
+      }
+
+      set signatureListRef(val) {
+        /* Önceki listener'ı iptal ediyoruz. */
+        if (this._signatureListRef) this._signatureListRef.off();
+        this._signatureListRef = val;
+
+        this._signatureListRef.on('value', snapshot => {
+          Table.instance.data = snapshot.val();
+        })
+
+      }
+    }
+
+  </script>
+</body>
+
+</html>
