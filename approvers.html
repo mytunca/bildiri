@@ -133,10 +133,12 @@
       }
 
       render() {
-        this.el.innerHTML = Object.keys(this._data).map(key => {
-          const { name, time } = this._data[key];
-          return `<tr><td>${name}</td><td>${new Date(time).toLocaleString('tr-TR')}</td></tr>`;
-        })
+        this.el.innerHTML = Object.keys(this._data)
+          .sort((a,b) => this._data[b].time - this._data[a].time)
+          .map(key => {
+            const { name, time } = this._data[key];
+            return `<tr><td>${name}</td><td>${new Date(time).toLocaleString('tr-TR')}</td></tr>`;
+          })
           .join("");
       }
 
@@ -181,7 +183,9 @@
           document.querySelector("#num-signatures").textContent = snapshot.val();
         })
 
-        this.signatureListRef = this.db.ref('approvers/list').limitToFirst(50);
+        this.signatureListRef = this.db.ref('approvers/list')
+          .orderByChild('time')
+          .limitToLast(50);
       }
 
       switchToShowAll() {
