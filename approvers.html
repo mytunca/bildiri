@@ -9,7 +9,7 @@
   <meta property="og:title" content="Gazze'deki Soykırım Hakkında Bildiri" />
   <meta property="og:type" content="article" />
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/mytunca/bildiri/main/assets/images/card-image.jpg" />
+    content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
 
   <meta property="og:url" content="https://mytunca.github.io/bildiri" />
 
@@ -127,9 +127,17 @@
         this.el = document.querySelector("table tbody");
       }
 
+      get data() {
+        return this._data || [];
+      }
+
       set data(val) {
         this._data = val;
         this.render();
+      }
+
+      pushData(val) {
+        this.data = [...this.data, val];
       }
 
       render() {
@@ -149,11 +157,14 @@
 
       constructor() {
         this.el = document.querySelector("#btn-show-all");
-        this.el.addEventListener("click", this.handleClick);
+        this.el.addEventListener("click", this.handleClick.bind(this), false);
+
+        return this.instance;
       }
 
       handleClick() {
         FirebaseDB.instance.switchToShowAll();
+        this.el.style.display = "none";
       }
     }
 
@@ -189,7 +200,7 @@
       }
 
       switchToShowAll() {
-        this.signatureListRef = this.db.ref('approvers/list')
+        this.signatureListRef = this.db.ref('approvers/list').orderByChild('time')
       }
 
       set signatureListRef(val) {
