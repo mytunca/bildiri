@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta property="og:title" content="Gazze'deki Soykırım Hakkında Bildiri" />
   <meta property="og:type" content="article" />
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
 
   <meta property="og:url" content="https://mytunca.github.io/bildiri" />
 
@@ -90,12 +89,23 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="icons">
-        <li><a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter"><span
-              class="label">Twitter</span></a></li>
-        <li><a href="https://instagram.com/doctorsstandwithpalestine" target="_blank"
-            class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope"><span
-              class="label">Email</span></a></li>
+        <li>
+          <a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter">
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/drswpalestine" target="_blank" class="icon brands fa-instagram">
+            <span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
+            <span class="label">Telegram Kanal</span></a>
+        </li>
+        <li>
+          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
+            <span class="label">Email</span></a>
+        </li>
       </ul>
       <ul class="copyright">
         <li>&copy; 2023</li>
@@ -142,7 +152,7 @@
 
       render() {
         this.el.innerHTML = Object.keys(this._data)
-          .sort((a,b) => this._data[b].time - this._data[a].time)
+          .sort((a, b) => this._data[b].time - this._data[a].time)
           .map(key => {
             const { name, time } = this._data[key];
             return `<tr><td>${name}</td><td>${new Date(time).toLocaleString('tr-TR')}</td></tr>`;

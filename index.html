@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta property="og:title" content="Gazze'deki Soykırım Hakkında Bildiri" />
   <meta property="og:type" content="article" />
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
 
   <meta property="og:url" content="https://mytunca.github.io/bildiri" />
 
@@ -39,7 +38,7 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-      <h1><a href="index.html">TÜRK HEKİMLERİNDEN BİLDİRİ</a></h1>
+      <h1><a href="index.html">DÜNYA KAMUOYUNA HEKİMLERDEN BİLDİRİ</a></h1>
       <nav id="nav">
         <ul>
           <li class="special">
@@ -62,7 +61,7 @@
     <!-- Banner -->
     <section id="banner">
       <div class="inner">
-        <h2>TÜRK <br />HEKİMLERİNDEN <br />BİLDİRİ</h2>
+        <h2>DÜNYA KAMUOYUNA<br />HEKİMLERDEN<br />BİLDİRİ</h2>
       </div>
       <a href="#one" class="more scrolly">Devamını Gör</a>
     </section>
@@ -94,11 +93,10 @@
     <section id="cta" class="wrapper style4">
       <div class="inner">
         <header>
-          <h2>İSRAİL ZULMÜNE KARŞI <br />BİLDİRİYE DESTEK VEREN HEKİMLER</h2>
+          <h2>ZULME KARŞI <br />DURAN HEKİMLER</h2>
         </header>
         <ul class="actions stacked">
           <li><a href="approvers.html" class="button fit primary">İMZA LİSTESİ</a></li>
-          <!-- <li><a href="#" class="button fit">Learn More</a></li> -->
         </ul>
       </div>
     </section>
@@ -106,12 +104,23 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="icons">
-        <li><a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter"><span
-              class="label">Twitter</span></a></li>
-        <li><a href="https://instagram.com/doctorsstandwithpalestine" target="_blank"
-            class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope"><span
-              class="label">Email</span></a></li>
+        <li>
+          <a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter">
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/drswpalestine" target="_blank" class="icon brands fa-instagram">
+            <span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
+            <span class="label">Telegram Kanal</span></a>
+        </li>
+        <li>
+          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
+            <span class="label">Email</span></a>
+        </li>
       </ul>
       <ul class="copyright">
         <li>&copy; 2023</li>
@@ -163,7 +172,7 @@
       }
 
       set content(content) {
-        this.contentDiv.innerHTML = content; 
+        this.contentDiv.innerHTML = content;
       }
     }
 
@@ -199,7 +208,7 @@
           .then(data => {
             const markdownParts = data.split("<!-- seperator -->");
 
-            markdownParts.forEach((part,i) => {
+            markdownParts.forEach((part, i) => {
               // Showdown.js'yi kullanarak Markdown içeriğini HTML'ye dönüştür
               const converter = new showdown.Converter();
               const htmlContent = converter.makeHtml(part.trim());

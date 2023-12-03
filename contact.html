@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta property="og:title" content="Gazze'deki Soykırım Hakkında Bildiri" />
   <meta property="og:type" content="article" />
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/mytunca/bildiri/main/images/card-image.jpg" />
 
   <meta property="og:url" content="https://mytunca.github.io/bildiri" />
 
@@ -51,7 +50,9 @@
                   <a href="approvers.html">İMZA LİSTESİ</a>
                 </li>
                 <li><a href="about-us.html">HAKKIMIZDA</a></li>
-                <li><bold>BİZE ULAŞIN</bold></li>
+                <li>
+                  <bold>BİZE ULAŞIN</bold>
+                </li>
               </ul>
             </div>
           </li>
@@ -66,7 +67,53 @@
       </header>
       <section class="wrapper style5">
         <div class="inner">
-          <h3>Yapım aşamasında...</h3>
+          <header>
+            <h4>Email</h4>
+          </header>
+          <p><a target="_blank"
+              href="mailto:doctorsstandwithpalestine@gmail.com">doctorsstandwithpalestine@gmail.com</a></p>
+          <header>
+            <h4>X (Twitter)</h4>
+          </header>
+          <p><a target="_blank" href="https://x.com/drswpalestine">https://x.com/drswpalestine</a></p>
+          <header>
+            <h4>Instagram</h4>
+          </header>
+          <p><a target="_blank" href="https://instagram.com/drswpalestine">https://instagram.com/drswpalestine</a></p>
+          <header>
+            <h4>Telegram Grup</h4>
+            <p>Hekimlere Özel</p>
+          </header>
+          <p><a target="_blank" href="https://t.me/+xlo9alZBUK9jYWM0">https://t.me/+xlo9alZBUK9jYWM0</a></p>
+          <header>
+            <h4>Telegram Kanal</h4>
+            <p>Herkese Açık</p>
+          </header>
+          <p><a target="_blank" href="https://t.me/standingdoctors">https://t.me/standingdoctors</a></p>
+          <!-- 
+          <hr />
+          <section>
+            <h4>Mesaj Bırakın</h4>
+            <form>
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="name" value="" placeholder="İsim">
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="email" name="email" value="" placeholder="Email">
+                </div>
+                <div class="col-12">
+                  <textarea name="message" placeholder="Mesajınız" rows="6"></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Gönder" class="primary"></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
+           -->
         </div>
       </section>
     </article>
@@ -74,12 +121,23 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="icons">
-        <li><a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter"><span
-              class="label">Twitter</span></a></li>
-        <li><a href="https://instagram.com/doctorsstandwithpalestine" target="_blank"
-            class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope"><span
-              class="label">Email</span></a></li>
+        <li>
+          <a href="https://x.com/drswpalestine" target="_blank" class="icon brands fa-twitter">
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/drswpalestine" target="_blank" class="icon brands fa-instagram">
+            <span class="label">Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
+            <span class="label">Telegram Kanal</span></a>
+        </li>
+        <li>
+          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
+            <span class="label">Email</span></a>
+        </li>
       </ul>
       <ul class="copyright">
         <li>&copy; 2023</li>
@@ -98,6 +156,16 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    class Form {
+      static instance = new Form();
+
+      constructor() {
+        this.el = document.querySelector("form");
+
+      }
+    }
+  </script>
 
 </body>
 
