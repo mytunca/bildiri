@@ -1829,6 +1829,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+  input[type="number"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1857,6 +1858,7 @@ input, select, textarea {
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+    input[type="number"]:focus,
 		select:focus,
 		textarea:focus {
 			box-shadow: 0 0 0 2px #21b2a6;
@@ -1882,6 +1884,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+  input[type="email"],
 	select {
 		height: 2.75em;
 	}
@@ -2860,6 +2863,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="text"],
 			.wrapper.style1 input[type="password"],
 			.wrapper.style1 input[type="email"],
+      .wrapper.style1 input[type="number"],
 			.wrapper.style1 select,
 			.wrapper.style1 textarea {
 				background-color: rgba(255, 255, 255, 0.075);
@@ -3023,6 +3027,7 @@ input, select, textarea {
 			.wrapper.style3 input[type="text"],
 			.wrapper.style3 input[type="password"],
 			.wrapper.style3 input[type="email"],
+      .wrapper.style3 input[type="number"],
 			.wrapper.style3 select,
 			.wrapper.style3 textarea {
 				background-color: rgba(255, 255, 255, 0.075);
@@ -3186,6 +3191,7 @@ input, select, textarea {
 			.wrapper.style5 input[type="text"],
 			.wrapper.style5 input[type="password"],
 			.wrapper.style5 input[type="email"],
+      .wrapper.style5 input[type="number"],
 			.wrapper.style5 select,
 			.wrapper.style5 textarea {
 				background-color: rgba(0, 0, 0, 0.0375);
@@ -3997,3 +4003,12 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
