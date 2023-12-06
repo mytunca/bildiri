@@ -179,6 +179,7 @@
           if (this._keys.has(key)) continue;
 
           const { name, time } = this.data[key];
+          if (name == "Soykırımı Kınıyorum") console.log(key);
           this.dataTable.row.add([name, new Date(time).toISOString()]);
           this._keys.add(key);
         }
