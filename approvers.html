@@ -51,6 +51,7 @@
                 <li>
                   <bold>İMZA LİSTESİ</bold>
                 </li>
+                <li><a href="sign.html">İMZALA</a></li>
                 <li><a href="about-us.html">HAKKIMIZDA</a></li>
                 <li><a href="contact.html">BİZE ULAŞIN</a></li>
               </ul>
@@ -67,7 +68,8 @@
       </header>
       <section class="wrapper style5">
         <div class="inner">
-          <h5>ŞU ANA KADAR BİLDİRİYİ İMZALAYAN HEKİM SAYISI: <span id="num-signatures"></span></h5>
+          <h5 id="counts"></h5>
+          <h5>İMZALAMAK İÇİN <a href="sign.html">TIKLAYINIZ.</a></h5>
           <table></table>
         </div>
       </section>
@@ -90,7 +92,8 @@
             <span class="label">Telegram Kanal</span></a>
         </li>
         <li>
-          <a href="https://whatsapp.com/channel/0029VaFOG9dCsU9QdTocTW0u" target="_blank" class="icon brands fa-whatsapp">
+          <a href="https://whatsapp.com/channel/0029VaFOG9dCsU9QdTocTW0u" target="_blank"
+            class="icon brands fa-whatsapp">
             <span class="label">WhatsApp Kanal</span></a>
         </li>
         <li>
@@ -134,6 +137,7 @@
           responsive: true,
           columns: [
             { title: 'İsim' },
+            { title: 'Görev' },
             { title: 'İmza Tarihi' }
           ],
           lengthChange: false,
@@ -141,15 +145,13 @@
             {
               targets: 0,
               width: "50%"
-            }
-            ,
+            },
             {
-              targets: 1,
+              targets: 2,
               render: DataTable.render.datetime(),
-              width: "35%"
             }
           ],
-          order: [[1, 'desc']],
+          order: [[2, 'desc']],
           language: { url: "assets/i18n/datatables.json" }
         });
 
@@ -178,14 +180,31 @@
         for (const key in this.data) {
           if (this._keys.has(key)) continue;
 
-          const { name, time } = this.data[key];
-          if (name == "Soykırımı Kınıyorum") console.log(key);
-          this.dataTable.row.add([name, new Date(time).toISOString()]);
+          const { name, time, job } = this.data[key];
+
+          this.dataTable.row.add([name, job, new Date(time).toISOString()]);
           this._keys.add(key);
         }
-        
+
         this.dataTable.draw(false);
 
+      }
+    }
+
+    class Counts {
+      static instance = new Counts();
+
+      constructor() {
+        this.el = document.querySelector("#counts");
+      }
+
+      set data({ doctor, dentist, student }) {
+        this.el.innerHTML = `ŞU ANA KADAR BİLDİRİMİZİ
+        ${+doctor + dentist + student} KİŞİ
+        (${doctor} HEKİM,
+        ${dentist} DİŞ HEKİMİ,
+        ${student} ÖĞRENCİ)
+        İMZALADI.`;
       }
     }
 
@@ -228,9 +247,9 @@
         firebase.initializeApp(this.firebaseConfig);
         this.db = firebase.database();
         this.approversRef = this.db.ref("approvers");
-        const countRef = this.approversRef.child("count");
+        const countRef = this.approversRef.child("counts");
         countRef.on('value', snapshot => {
-          document.querySelector("#num-signatures").textContent = snapshot.val();
+          new Counts().data = snapshot.val();
         })
 
         this.mode = "restricted";

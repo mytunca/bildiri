@@ -50,6 +50,7 @@
                 <li>
                   <a href="approvers.html">İMZA LİSTESİ</a>
                 </li>
+                <li><bold>İMZALA</bold></li>
                 <li><a href="about-us.html">HAKKIMIZDA</a></li>
                 <li>
                   <a href="contact.html">BİZE ULAŞIN</a>
@@ -69,18 +70,17 @@
       <section class="wrapper style5">
         <div class="inner">
           <section style="text-align: center;">
-            <h4>LÜTFEN DİKKAT</h4>
-            <p><strong>Değerli meslektaşımız;</strong></p>
-            <p>İmza sayfası herkese açık <b>değildir.</b></p><p>Bu formun hekimler dışında kimseye ulaşmamasını
-            önemsiyoruz.<br> Sizlerin de bu konuda gerekli hassasiyeti göstereceğine inanıyoruz.</p>
             <p>
-              Mükerrer kayıtların önüne geçmek adına lütfen formu doldurmadan önce <br>isminizin listede 
-              olup olmadığını <a target="_blank" href="/approvers.html">buradan</a> kontrol ediniz.
+              Formu düzgün görüntüleyemiyorsanız
+              <a target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe6VzTnsbu2LMIJ8tYKhVz__bhPI1xdRJ0qv5WgvxscG7slFg/viewform">
+                tıklayınız.
+              </a>
             </p>
             <hr>
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSe6VzTnsbu2LMIJ8tYKhVz__bhPI1xdRJ0qv5WgvxscG7slFg/viewform?embedded=true"
-             frameborder="0" marginheight="0" marginwidth="0" style="width: 100%; height: 4500px;">Yükleniyor…</iframe>
+              frameborder="0" marginheight="0" marginwidth="0" style="width: 100%; height: 3000px;">Yükleniyor…</iframe>
           </section>
         </div>
       </section>
@@ -129,6 +129,14 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script>
+    $('iframe').load(function () {
+      this.style.height =
+        this.contentWindow.document.body.offsetHeight + 'px';
+    });
+  </script>
 
 </body>
 
