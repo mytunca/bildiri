@@ -38,90 +38,37 @@
   <div id="page-wrapper">
 
     <!-- Header -->
-    <header id="header">
-      <h1><a href="/">HEKİMLERDEN DÜNYA KAMUOYUNA</a></h1>
-      <nav id="nav">
-        <ul>
-          <li class="special">
-            <a href="#menu" class="menuToggle"><span>Menü</span></a>
-            <div id="menu">
-              <ul>
-                <li><a href="./">BİLDİRİ METNİ</a></li>
-                <li>
-                  <a href="approvers.html">İMZA LİSTESİ</a>
-                </li>
-                <li><bold>İMZALA</bold></li>
-                <li><a href="about-us.html">HAKKIMIZDA</a></li>
-                <li>
-                  <a href="contact.html">BİZE ULAŞIN</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header"></header>
 
     <!-- Main -->
     <article id="main">
       <header>
-        <h2>İMZA</h2>
+        <h2></h2>
       </header>
       <section class="wrapper style5">
         <div class="inner">
           <section style="text-align: center;">
             <p>
-              Formu düzgün görüntüleyemiyorsanız
-              <a target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe6VzTnsbu2LMIJ8tYKhVz__bhPI1xdRJ0qv5WgvxscG7slFg/viewform">
-                tıklayınız.
-              </a>
+              <span></span>
+              <a target="_blank"></a>
             </p>
             <hr>
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSe6VzTnsbu2LMIJ8tYKhVz__bhPI1xdRJ0qv5WgvxscG7slFg/viewform?embedded=true"
-              frameborder="0" marginheight="0" marginwidth="0" style="width: 100%; height: 3000px;">Yükleniyor…</iframe>
+              frameborder="0" marginheight="0" marginwidth="0" style="width: 100%; height: 3000px;">Loading...</iframe>
           </section>
         </div>
       </section>
     </article>
 
     <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li>
-          <a href="https://x.com/standingdoctors" target="_blank" class="icon brands fa-twitter">
-            <span class="label">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/standingdoctors" target="_blank" class="icon brands fa-instagram">
-            <span class="label">Instagram</span></a>
-        </li>
-        <li>
-          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
-            <span class="label">Telegram Kanal</span></a>
-        </li>
-        <li>
-          <a href="https://whatsapp.com/channel/0029VaFOG9dCsU9QdTocTW0u" target="_blank"
-            class="icon brands fa-whatsapp">
-            <span class="label">WhatsApp Kanal</span></a>
-        </li>
-        <li>
-          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
-            <span class="label">Email</span></a>
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; 2023</li>
-        <li>Prepared By Dr. Muhammet Yunus Tunca</li>
-        <li>Design: <a href="http://html5up.net/spectral" target="_blank">HTML5 UP</a></li>
-      </ul>
-    </footer>
+    <footer id="footer"></footer>
 
   </div>
 
   <!-- Scripts -->
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/components/footer.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -129,15 +76,28 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <script>
-    $('iframe').load(function () {
-      this.style.height =
-        this.contentWindow.document.body.offsetHeight + 'px';
-    });
-  </script>
+  <script src="assets/js/i18n.js"></script>
 
+  <script>
+    class Content {
+      static instance = new Content();
+
+      constructor() {
+        this.link = document.querySelector("#main > section > div > section > p > a")
+        this.iframe = document.querySelector("#main > section > div > section > iframe");
+      }
+
+      set src(value) {
+        this.iframe.src = value;
+        this.link.href = value;
+
+      }
+      onLanguageChange(lang) {
+        if (lang === "tr") this.src = "https://docs.google.com/forms/d/e/1FAIpQLSe6VzTnsbu2LMIJ8tYKhVz__bhPI1xdRJ0qv5WgvxscG7slFg/viewform?embedded=true"
+        else this.src = "https://docs.google.com/forms/d/e/1FAIpQLScILDRADUSv1cgpmXdLN7tfzO1DX8XiNsjTvttc8Yf6l7yIAw/viewform?embedded=true"
+      }
+    }
+  </script>
 </body>
 
 </html>

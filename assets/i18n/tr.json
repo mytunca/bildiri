@@ -1,8 +1,120 @@
 {
-  "navbar-title": "Türk Hekimlerinden Bildiri - 17.11.2023",
-  "signature-list-caption": "İmza Listesi",
-  "th-name": "İsim",
-  "th-signature-date": "İmza Tarihi",
-  "filter": "Filtrele",
-  "loading": "Yükleniyor..."
+  "components": {
+    "#header": {
+      "h1 > a": {
+        "innerText": "HEKİMLERDEN BİLDİRİ"
+      },
+      "#iconDiv > a > span": {
+        "innerText": "TR"
+      },
+      "#nav > ul > li > a > span": {
+        "innerText": "Menü"
+      }
+    },
+    "#menu": {
+      "ul > li:nth-child(1) > *": {
+        "innerText": "BİLDİRİ METNİ"
+      },
+      "ul > li:nth-child(2) > *": {
+        "innerText": "İMZA LİSTESİ"
+      },
+      "ul > li:nth-child(3) > *": {
+        "innerText": "İMZALA"
+      },
+      "ul > li:nth-child(4) > *": {
+        "innerText": "HAKKIMIZDA"
+      },
+      "ul > li:nth-child(5) > *": {
+        "innerText": "BİZE ULAŞIN"
+      }
+    }
+  },
+  "pages": {
+    "index": {
+      "head > title": {
+        "innerText": "Hekimlerden Dünya Kamuoyuna Bildiri"
+      },
+      "#banner > div > h2": {
+        "innerHTML": "HEKİMLERDEN <br />DÜNYA KAMUOYUNA <br />BİLDİRİ"
+      },
+      "#banner > a": {
+        "innerText": "Devamını Gör"
+      },
+      "#one > div > header": {
+        "innerHTML": "<h2>DÜNYA KAMUOYUNUN DİKKATİNE</h2><p>Türkiye'nin her bölgesinden,<br />çeşitli branşlardan binlerce bağımsız hekimin,<br />İsrail tarafından Gazze'de işlenen soykırım suçu<br />hakkında ortak yayımladığı bildiri</p><p>17.11.2023</p>"
+      },
+      "#cta > div > header": {
+        "innerHTML": "<h2>ZULME KARŞI <br />DURAN DOKTORLAR</h2>"
+      },
+      "#cta > div > ul > li:nth-child(1) > a": {
+        "innerText": "ŞİMDİ İMZALA"
+      },
+      "#cta > div > ul > li:nth-child(2) > a": {
+        "innerText": "İMZA LİSTESİ"
+      }
+    },
+    "sign": {
+      "head > title": {
+        "innerText": "İmzala"
+      },
+      "#main > header > h2": {
+        "innerText": "İMZALA"
+      },
+      "#main > section > div > section > p > span": {
+        "innerText": "Formu düzgün görüntüleyemiyorsanız "
+      },
+      "#main > section > div > section > p > a": {
+        "innerText": "tıklayınız."
+      }
+    },
+    "approvers": {
+      "head > title": {
+        "innerText": "İmza Listesi"
+      },
+      "#main > header > h2": {
+        "innerText": "BİLDİRİYİ İMZALAYAN HEKİMLERİMİZ"
+      },
+      "#main > section > div > h5 > span": {
+        "innerText": "iMZALAMAK İÇİN"
+      },
+      "#main > section > div > h5 > a": {
+        "innerText": "tıklayınız."
+      }
+    },
+    "about-us": {
+      "head > title": {
+        "innerText": "Hakkımızda"
+      },
+      "#main > header > h2": {
+        "innerText": "HAKKIMIZDA"
+      }
+    },
+    "contact": {
+      "head > title": {
+        "innerText": "Bize Ulaşın"
+      },
+      "#main > header > h2": {
+        "innerText": "BİZE ULAŞIN"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(9) > h4": {
+        "innerText": "Telegram Grup"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(9) > p": {
+        "innerText": "Hekimlere Özel"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(11) > h4":{
+        "innerText": "Telegram Kanal"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(11) > p":{
+        "innerText": "Herkese Açık"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(13) > h4":{
+        "innerText": "WhatsApp Kanal"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(13) > p":{
+        "innerText": "Herkese Açık"
+      }
+    }
+  }
+
 }

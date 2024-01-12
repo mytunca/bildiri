@@ -1,4 +1,4 @@
-**Biz; Türkiye’nin farklı bölgelerinden vicdani duyarlılıklarla bir araya gelmiş hekimleriz.** Tarihin omuzlarımıza yüklediği sorumluluk bilinciyle yakın bir coğrafyada, Filistin toprağı Gazze’de yıllardır devam etmekte olan “soykırım” niteliğindeki sivil cinayetlerine sessiz kalmamız mümkün değildir.
+**Biz; Türkiye’nin farklı bölgelerinden vicdani duyarlılıklarla bir araya gelmiş hekimleriz.** Tarihin omuzlarımıza yüklediği sorumluluk bilinciyle yakın bir coğrafyada, Filistin toprağı Gazze’de yıllardır devam etmekte olan **soykırım** niteliğindeki sivil cinayetlerine sessiz kalmamız mümkün değildir.
 
 İşgale ve zulme uğrayan Filistin halkı ile dayanışma içerisinde olma bilinciyle tüm dünya kamuoyuna sesleniyoruz; 7 Ekim 2023 tarihinden bu yana Gazze’de işgalci İsrail tarafından “self defence” propagandası altında sistematik bir soykırım gerçekleştirilmektedir.
 

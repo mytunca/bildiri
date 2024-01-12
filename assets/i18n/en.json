@@ -1,8 +1,114 @@
 {
-  "navbar-title": "Statement From Turkish Physicians - 11/17/2023",
-  "signature-list-caption": "Signature List",
-  "th-name": "Name",
-  "th-signature-date": "Signature Date",
-  "filter": "Filter",
-  "loading": "Loading..."
+  "components": {
+    "#header": {
+      "h1 > a": {
+        "innerText": "STATEMENT FROM PHYSICIANS"
+      },
+      "#iconDiv > a > span": {
+        "innerText": "EN"
+      },
+      "#nav > ul > li > a > span": {
+        "innerText": "Menu"
+      }
+    },
+    "#menu": {
+      "ul > li:nth-child(1) > *": {
+        "innerText": "STATEMENT TEXT"
+      },
+      "ul > li:nth-child(2) > *": {
+        "innerText": "SIGNERS"
+      },
+      "ul > li:nth-child(3) > *": {
+        "innerText": "SIGN"
+      },
+      "ul > li:nth-child(4) > *": {
+        "innerText": "ABOUT US"
+      },
+      "ul > li:nth-child(5) > *": {
+        "innerText": "CONTACT US"
+      }
+    }
+  },
+  "pages": {
+    "index": {
+      "head > title": {
+        "innerText": "Statement From Physicians To The World Public"
+      },
+      "#banner > div > h2": {
+        "innerHTML": "STATEMENT<br />FROM PHYSICIANS<br />TO THE WORLD PUBLIC"
+      },
+      "#banner > a": {
+        "innerText": "More"
+      },
+      "#one > div > header": {
+        "innerHTML": "<h2>TO THE ATTENTION OF THE GLOBAL PUBLIC</h2><p>A joint statement<br>issued by thousands of independent physicians<br>from various branches from all regions of Turkey<br> about the crime of genocide committed by Israel in Gaza</p><p>11/17/2023</p>"
+      },
+      "#cta > div > header": {
+        "innerHTML": "<h2>DOCTORS STANDING<br />AGAINST OPPRESSION</h2>"
+      },
+      "#cta > div > ul > li:nth-child(1) > a": {
+        "innerText": "SIGN NOW"
+      },
+      "#cta > div > ul > li:nth-child(2) > a": {
+        "innerText": "SIGNERS"
+      }
+    },
+    "sign": {
+      "head > title": {
+        "innerText": "Sign"
+      },
+      "#main > header > h2": {
+        "innerText": "SIGN"
+      },
+      "#main > section > div > section > p > span": {
+        "innerText": "If you are unable to see the form below properly please "
+      },
+      "#main > section > div > section > p > a": {
+        "innerText": "click."
+      }
+    },
+    "approvers": {
+      "head > title": {
+        "innerText": "Signers"
+      },
+      "#main > header > h2": {
+        "innerText": "SIGNERS"
+      }
+    },
+    "about-us": {
+      "head > title": {
+        "innerText": "About Us"
+      },
+      "#main > header > h2": {
+        "innerText": "ABOUT US"
+      }
+    },
+    "contact": {
+      "head > title": {
+        "innerText": "Contact Us"
+      },
+      "#main > header > h2": {
+        "innerText": "CONTACT US"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(9) > h4": {
+        "innerText": "Telegram Group"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(9) > p": {
+        "innerText": "Special for Physicians"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(11) > h4":{
+        "innerText": "Telegram Channel"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(11) > p":{
+        "innerText": "Public"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(13) > h4":{
+        "innerText": "WhatsApp Channel"
+      },
+      "#main > section > div > section > div > div.col-7.col-12-medium > header:nth-child(13) > p":{
+        "innerText": "Public"
+      }
+    }
+  }
+
 }

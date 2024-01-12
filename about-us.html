@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Hakkımızda</title>
+  <title></title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta property="og:title" content="Hekimlerden Dünya Kamuoyuna Gazze'deki Soykırım Hakkında Bildiri" />
@@ -34,106 +34,26 @@
 
 <body class="is-preload">
 
-  <!-- Page Wrapper -->
   <div id="page-wrapper">
 
-    <!-- Header -->
-    <header id="header">
-      <h1><a href="/">HEKİMLERDEN DÜNYA KAMUOYUNA</a></h1>
-      <nav id="nav">
-        <ul>
-          <li class="special">
-            <a href="#menu" class="menuToggle"><span>Menü</span></a>
-            <div id="menu">
-              <ul>
-                <li><a href="./">BİLDİRİ METNİ</a></li>
-                <li>
-                  <a href="approvers.html">İMZA LİSTESİ</a>
-                </li>
-                <li><a href="sign.html">İMZALA</a></li>
-                <li>
-                  <bold>HAKKIMIZDA</bold>
-                </li>
-                <li><a href="contact.html">BİZE ULAŞIN</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header"></header>
 
-    <!-- Main -->
     <article id="main">
       <header>
-        <h2>HAKKIMIZDA</h2>
+        <h2></h2>
       </header>
       <section class="wrapper style5">
-        <div class="inner">
-          <p>
-            Bu platform <strong>din, dil, ırk, cinsiyet gibi hiçbir ayrım gözetmeden bașta Filistin olmak üzere
-              zulüm altında olan insanların sesleri olmak, imkanlar dahilinde ihtiyaçlarını karşılamak ve
-              dayanışma ruhunu hekimler arasında yaymak</strong> amacıyla bir grup hekim tarafından oluşturulmuștur.
-          </p>
-          <p>
-            16.11.2023 tarihinde; insanlığın sınırlarını zorlayan bir zulme sessiz kalmamak
-            adına, Filistin topraklarında süregelen ve artarak soykırım boyutuna varan vahșete karşı bir araya
-            gelmiş hekimler olarak, 4 binin üzerinde destekçi meslektaşımızla kalıcı barışın sağlanmasına
-            yönelik bir basın bildirisine imza atmış bulunmaktayız.
-          </p>
-          <p>
-            Paylașma erdemine sahip
-            gönüllüler ve Hikmet Boran ruhunu benimsemiş
-            hekimler olarak zulmün her türlüsüne karşıyız.
-          </p>
-          <p>
-            Bu çerçevede Filistin davasını gündemde tutmak
-            birincil önceliğimizdir.
-            Bu süreçte maddi, manevi, psikolojik her türlü desteğin yanında ve teşvikçisi
-            olacağız.
-            Bu konuda meslektaşlarımızla dayanışma ve istişare içinde
-            sürecimiz devam edecektir. Her türlü katkı ve
-            önerilerinizi bekliyoruz.
-          </p>
-          <p><strong>Zulme Karşı Duran Doktorlar</strong></p>
-        </div>
+        <div class="inner"></div>
       </section>
     </article>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li>
-          <a href="https://x.com/standingdoctors" target="_blank" class="icon brands fa-twitter">
-            <span class="label">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/standingdoctors" target="_blank" class="icon brands fa-instagram">
-            <span class="label">Instagram</span></a>
-        </li>
-        <li>
-          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
-            <span class="label">Telegram Kanal</span></a>
-        </li>
-        <li>
-          <a href="https://whatsapp.com/channel/0029VaFOG9dCsU9QdTocTW0u" target="_blank" class="icon brands fa-whatsapp">
-            <span class="label">WhatsApp Kanal</span></a>
-        </li>
-        <li>
-          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
-            <span class="label">Email</span></a>
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; 2023</li>
-        <li>Prepared By Dr. Muhammet Yunus Tunca</li>
-        <li>Design: <a href="http://html5up.net/spectral" target="_blank">HTML5 UP</a></li>
-      </ul>
-    </footer>
+    <footer id="footer"></footer>
 
   </div>
 
   <!-- Scripts -->
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/components/footer.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -141,7 +61,31 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="lib/showdownjs/dist/showdown.min.js"></script>
 
+  <script>
+    class Content {
+      static instance = new Content();
+
+      constructor() {
+        this.innerDiv = document.querySelector("#main > section > div.inner");
+      }
+      onLanguageChange(lang) {
+        fetch(`assets/content/about-us/${lang}.md`)
+          .then(response => response.text())
+          .then(data => {
+            const converter = new showdown.Converter();
+            const htmlContent = converter.makeHtml(data.trim());
+            this.innerDiv.innerHTML = htmlContent;
+          })
+          .catch(error => {
+            console.error('Hata:', error);
+          });
+      }
+    }
+  </script>
+  
 </body>
 
 </html>

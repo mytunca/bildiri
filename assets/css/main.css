@@ -3489,12 +3489,45 @@ input, select, textarea {
 				}
 
 		#header nav {
+      display: flex;
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
 			right: 0;
 			top: 0;
 		}
+
+      #header nav #langDiv {
+        cursor: pointer;
+        width: 5em;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+
+        #header nav #langDiv #iconDiv {
+          display: flex;
+          justify-content: flex-start;
+        }
+
+          #header nav #langDiv #iconDiv span {
+            padding: 0 10px;
+            letter-spacing: 0.225rem;
+            font-size: 0.8em;
+          }
+
+        #header nav #langDiv #optionsDiv {
+          background: rgb(0, 0, 0, 0.5);
+        }
+
+          #header nav #langDiv #optionsDiv div {
+            padding: 4px 7px;
+            line-height: normal;
+          }
+
+          #header nav #langDiv #optionsDiv div:hover {
+            background: rgb(0, 0, 0, 0.7);
+          }
 
 			#header nav > ul {
 				list-style: none;

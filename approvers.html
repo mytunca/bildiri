@@ -39,78 +39,30 @@
   <div id="page-wrapper">
 
     <!-- Header -->
-    <header id="header">
-      <h1><a href="/">HEKİMLERDEN DÜNYA KAMUOYUNA</a></h1>
-      <nav id="nav">
-        <ul>
-          <li class="special">
-            <a href="#menu" class="menuToggle"><span>Menü</span></a>
-            <div id="menu">
-              <ul>
-                <li><a href="./">BİLDİRİ METNİ</a></li>
-                <li>
-                  <bold>İMZA LİSTESİ</bold>
-                </li>
-                <li><a href="sign.html">İMZALA</a></li>
-                <li><a href="about-us.html">HAKKIMIZDA</a></li>
-                <li><a href="contact.html">BİZE ULAŞIN</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header"></header>
 
     <!-- Main -->
     <article id="main">
       <header>
-        <h2>BİLDİRİYİ İMZALAYAN HEKİMLERİMİZ</h2>
+        <h2></h2>
       </header>
       <section class="wrapper style5">
         <div class="inner">
-          <h5 id="counts"></h5>
-          <h5>İMZALAMAK İÇİN <a href="sign.html">TIKLAYINIZ.</a></h5>
+          <!-- <h5 id="counts"></h5> -->
+          <!-- <h5><span></span><a href="sign.html"></a></h5> -->
           <table></table>
         </div>
       </section>
     </article>
 
     <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li>
-          <a href="https://x.com/standingdoctors" target="_blank" class="icon brands fa-twitter">
-            <span class="label">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/standingdoctors" target="_blank" class="icon brands fa-instagram">
-            <span class="label">Instagram</span></a>
-        </li>
-        <li>
-          <a href="https://t.me/standingdoctors" target="_blank" class="icon brands fa-telegram">
-            <span class="label">Telegram Kanal</span></a>
-        </li>
-        <li>
-          <a href="https://whatsapp.com/channel/0029VaFOG9dCsU9QdTocTW0u" target="_blank"
-            class="icon brands fa-whatsapp">
-            <span class="label">WhatsApp Kanal</span></a>
-        </li>
-        <li>
-          <a href="mailto:doctorsstandwithpalestine@gmail.com" class="icon solid fa-envelope">
-            <span class="label">Email</span></a>
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; 2023</li>
-        <li>Prepared By Dr. Muhammet Yunus Tunca</li>
-        <li>Design: <a href="http://html5up.net/spectral" target="_blank">HTML5 UP</a></li>
-      </ul>
-    </footer>
+    <footer id="footer"></footer>
 
   </div>
 
   <!-- Scripts -->
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/components/footer.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -118,6 +70,7 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
   <!-- DataTables scripts -->
   <script src="assets/js/datatables.min.js"></script>
@@ -136,9 +89,9 @@
           processing: true,
           responsive: true,
           columns: [
-            { title: 'İsim' },
-            { title: 'Görev' },
-            { title: 'İmza Tarihi' }
+            { title: 'Name' },
+            { title: 'Position' },
+            { title: 'Signature Date' }
           ],
           lengthChange: false,
           columnDefs: [
@@ -152,7 +105,7 @@
             }
           ],
           order: [[2, 'desc']],
-          language: { url: "assets/i18n/datatables.json" }
+          //language: { url: "assets/i18n/datatables.json" }
         });
 
         this.dataTable.on('search.dt', (e) => {
@@ -261,6 +214,16 @@
       }
 
     }
+
+    class Content {
+      static instance = new Content();
+
+      onLanguageChange(lang) {
+
+      }
+    }
+
+
   </script>
 </body>
 
