@@ -25,7 +25,7 @@ class Header {
 
   constructor() {
     this.el = document.querySelector("#header");
-    this.el.innerHTML = `<h1><a href="/"></a></h1>`;
+    this.el.innerHTML = `<h1><a href="/">Standing Doctors</a></h1>`;
     this.create();
   }
 

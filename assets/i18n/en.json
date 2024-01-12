@@ -1,9 +1,6 @@
 {
   "components": {
     "#header": {
-      "h1 > a": {
-        "innerText": "STATEMENT FROM PHYSICIANS"
-      },
       "#iconDiv > a > span": {
         "innerText": "EN"
       },

@@ -1,9 +1,6 @@
 {
   "components": {
     "#header": {
-      "h1 > a": {
-        "innerText": "HEKİMLERDEN BİLDİRİ"
-      },
       "#iconDiv > a > span": {
         "innerText": "TR"
       },
