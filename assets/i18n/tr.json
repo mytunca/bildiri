@@ -35,16 +35,16 @@
         "innerText": "Hekimlerden Dünya Kamuoyuna Bildiri"
       },
       "#banner > div > h2": {
-        "innerHTML": "HEKİMLERDEN <br />DÜNYA KAMUOYUNA <br />BİLDİRİ"
+        "innerHTML": "HEKİMLERDEN<br /> DÜNYA KAMUOYUNA<br /> BİLDİRİ"
       },
       "#banner > a": {
         "innerText": "Devamını Gör"
       },
       "#one > div > header": {
-        "innerHTML": "<h2>DÜNYA KAMUOYUNUN DİKKATİNE</h2><p>Türkiye'nin her bölgesinden,<br />çeşitli branşlardan binlerce bağımsız hekimin,<br />İsrail tarafından Gazze'de işlenen soykırım suçu<br />hakkında ortak yayımladığı bildiri</p><p>17.11.2023</p>"
+        "innerHTML": "<h2>DÜNYA KAMUOYUNUN DİKKATİNE</h2><p>Türkiye'nin her bölgesinden,<br /> çeşitli branşlardan binlerce bağımsız hekimin,<br /> İsrail tarafından Gazze'de işlenen soykırım suçu<br /> hakkında ortak yayımladığı bildiri</p><p>17.11.2023</p>"
       },
       "#cta > div > header": {
-        "innerHTML": "<h2>ZULME KARŞI <br />DURAN DOKTORLAR</h2>"
+        "innerHTML": "<h2>ZULME KARŞI<br /> DURAN DOKTORLAR</h2>"
       },
       "#cta > div > ul > li:nth-child(1) > a": {
         "innerText": "ŞİMDİ İMZALA"

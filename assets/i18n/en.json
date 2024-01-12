@@ -35,16 +35,16 @@
         "innerText": "Statement From Physicians To The World Public"
       },
       "#banner > div > h2": {
-        "innerHTML": "STATEMENT<br />FROM PHYSICIANS<br />TO THE WORLD PUBLIC"
+        "innerHTML": "STATEMENT<br /> FROM PHYSICIANS<br /> TO THE WORLD PUBLIC"
       },
       "#banner > a": {
         "innerText": "More"
       },
       "#one > div > header": {
-        "innerHTML": "<h2>TO THE ATTENTION OF THE GLOBAL PUBLIC</h2><p>A joint statement<br>issued by thousands of independent physicians<br>from various branches from all regions of Turkey<br> about the crime of genocide committed by Israel in Gaza</p><p>11/17/2023</p>"
+        "innerHTML": "<h2>TO THE ATTENTION OF THE GLOBAL PUBLIC</h2><p>A joint statement<br> issued by thousands of independent physicians<br> from various branches from all regions of Türkiye<br> about the crime of genocide committed by Israel in Gaza</p><p>11/17/2023</p>"
       },
       "#cta > div > header": {
-        "innerHTML": "<h2>DOCTORS STANDING<br />AGAINST OPPRESSION</h2>"
+        "innerHTML": "<h2>DOCTORS STANDING<br /> AGAINST OPPRESSION</h2>"
       },
       "#cta > div > ul > li:nth-child(1) > a": {
         "innerText": "SIGN NOW"
